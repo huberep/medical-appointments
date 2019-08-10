@@ -1,0 +1,12 @@
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.DataAccess\bin\Debug\MedicalAppointments.DataAccess.dll.config
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.DataAccess\bin\Debug\MedicalAppointments.DataAccess.dll
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.DataAccess\bin\Debug\MedicalAppointments.DataAccess.pdb
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.DataAccess\obj\Debug\MedicalAppointments.DataAccess.csprojAssemblyReference.cache
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.DataAccess\obj\Debug\MedicalAppointments.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.DataAccess\obj\Debug\MedicalAppointments.DataAccess.csproj.CopyComplete
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.DataAccess\obj\Debug\MedicalAppointments.DataAccess.dll
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.DataAccess\obj\Debug\MedicalAppointments.DataAccess.pdb

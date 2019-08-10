@@ -4,3 +4,6 @@
 
 /.vs
 /MedicalAppointments/.vs/MedicalAppointments
+/MedicalAppointments/MedicalAppointments/App_Data
+/MedicalAppointments/MedicalAppointments.DataAccess/bin/Debug
+/MedicalAppointments/MedicalAppointments.Tests/bin/Debug
