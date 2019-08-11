@@ -12,14 +12,8 @@ namespace MedicalAppointments.Controllers
 {
     public class HomeController : Controller
     {
-
         public ActionResult Index()
         {
-            IRepository repo = new MedicalAppointmentsRepository(new MedicalAppointmentContext());
-            //PatientController patientController = new PatientController(repo);
-
-            //var result = patientController.Get();
-
             return View();
         }
 
