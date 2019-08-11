@@ -56,3 +56,5 @@ C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalApp
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Tests\obj\Debug\MedicalAppointments.Web.Tests.csproj.CopyComplete
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Tests\obj\Debug\MedicalAppointments.Tests.dll
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Tests\obj\Debug\MedicalAppointments.Tests.pdb
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Tests\bin\Debug\MedicalAppointments.Common.dll
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Tests\bin\Debug\MedicalAppointments.Common.pdb

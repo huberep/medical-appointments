@@ -1,9 +1,7 @@
-﻿using MedicalAppointments.DataAccess.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
+using MedicalAppointments.Common.Interfaces;
 
-namespace MedicalAppointments.DataAccess.Models
+namespace MedicalAppointments.Common.Models
 {
     public class Appointment : IAppointment
     {

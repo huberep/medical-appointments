@@ -10,3 +10,5 @@ C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalApp
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.DataAccess\obj\Debug\MedicalAppointments.DataAccess.csproj.CopyComplete
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.DataAccess\obj\Debug\MedicalAppointments.DataAccess.dll
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.DataAccess\obj\Debug\MedicalAppointments.DataAccess.pdb
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.DataAccess\bin\Debug\MedicalAppointments.Common.dll
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.DataAccess\bin\Debug\MedicalAppointments.Common.pdb

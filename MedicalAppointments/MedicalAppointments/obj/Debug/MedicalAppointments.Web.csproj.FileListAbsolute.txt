@@ -115,3 +115,5 @@ C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalApp
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\obj\Debug\MedicalAppointments.Web.csproj.CopyComplete
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\obj\Debug\MedicalAppointments.dll
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\obj\Debug\MedicalAppointments.pdb
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\bin\MedicalAppointments.Common.dll
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\bin\MedicalAppointments.Common.pdb

@@ -1,4 +1,5 @@
 ﻿using System;
+using MedicalAppointments.Common.Models;
 using MedicalAppointments.DataAccess.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using sut = MedicalAppointments.Web.Api.Utilities.MedicalAppointmentsApiUtilities;

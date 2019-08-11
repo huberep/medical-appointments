@@ -1,10 +1,8 @@
-﻿using MedicalAppointments.DataAccess.Interfaces;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
+using MedicalAppointments.DataAccess.Interfaces;
 
-namespace MedicalAppointments.DataAccess.Models
+namespace MedicalAppointments.Common.Models
 {
     public class Patient : IPatient
     {

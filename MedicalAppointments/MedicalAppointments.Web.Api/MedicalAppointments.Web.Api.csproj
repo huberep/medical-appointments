@@ -114,6 +114,10 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MedicalAppointments.Common\MedicalAppointments.Common.csproj">
+      <Project>{C8D34970-08C7-490E-8E74-70DBC258C799}</Project>
+      <Name>MedicalAppointments.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MedicalAppointments.DataAccess\MedicalAppointments.DataAccess.csproj">
       <Project>{8BC1E79D-3993-4481-BE9F-91541C39390D}</Project>
       <Name>MedicalAppointments.DataAccess</Name>

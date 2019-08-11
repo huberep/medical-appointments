@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Web.Http;
+﻿using System.Web.Http;
+using MedicalAppointments.Common.Models;
 using MedicalAppointments.DataAccess.Interfaces;
 using MedicalAppointments.DataAccess.Models;
 using MedicalAppointments.DataAccess.Services;

@@ -1,5 +1,5 @@
 ﻿using System;
-using MedicalAppointments.DataAccess.Models;
+using MedicalAppointments.Common.Models;
 
 namespace MedicalAppointments.Web.Api.Utilities
 {

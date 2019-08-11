@@ -1,10 +1,9 @@
-﻿using MedicalAppointments.DataAccess.Interfaces;
-using MedicalAppointments.DataAccess.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using MedicalAppointments.Common.Interfaces;
+using MedicalAppointments.Common.Models;
+using MedicalAppointments.DataAccess.Interfaces;
 
 namespace MedicalAppointments.DataAccess.Services
 {
