@@ -66,8 +66,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AppointmentsControllerTests.cs" />
+    <Compile Include="Controllers\AppointmentTypesControllerTests.cs" />
     <Compile Include="Controllers\PatientsControllerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\MedicalAppointmentsApiUtilitiesTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

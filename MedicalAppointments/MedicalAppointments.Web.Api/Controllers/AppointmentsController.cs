@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
+﻿using System.Web.Http;
 using MedicalAppointments.DataAccess.Interfaces;
 using MedicalAppointments.DataAccess.Models;
 using MedicalAppointments.DataAccess.Services;
+using MedicalAppointments.Web.Api.Utilities;
 
 namespace MedicalAppointments.Web.Api.Controllers
 {
@@ -44,7 +40,7 @@ namespace MedicalAppointments.Web.Api.Controllers
         [Route("api/appointments/add")]
         public IHttpActionResult Add(Appointment appointment)
         {
-            if (!ModelState.IsValid)
+            if (!ModelState.IsValid || !MedicalAppointmentsApiUtilities.IsValid(appointment))
                 return BadRequest("Invalid data.");
 
             var result = _repository.AddAppointment(appointment);
@@ -55,7 +51,7 @@ namespace MedicalAppointments.Web.Api.Controllers
         [Route("api/appointments/cancel")]
         public IHttpActionResult Cancel(Appointment appointment)
         {
-            if (!ModelState.IsValid)
+            if (!ModelState.IsValid || !MedicalAppointmentsApiUtilities.IsValid(appointment))
                 return BadRequest("Invalid data.");
 
             var result = _repository.CancelAppointment(appointment);

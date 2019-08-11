@@ -17,6 +17,10 @@ namespace MedicalAppointments.DataAccess.Services
             _dbContext = dbContext;
         }
 
+        /// <summary>
+        /// Gets All Patients
+        /// </summary>
+        /// <returns>List of Patients</returns>
         public List<Patient> GetAllPatients()
         {
             using (var db = _dbContext)
