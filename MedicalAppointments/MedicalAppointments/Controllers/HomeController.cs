@@ -22,13 +22,13 @@ namespace MedicalAppointments.Controllers
 
         public async Task<ActionResult> Patient()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "You can manage your patient's appointments from here";
 
             var httpClient = new HttpClient();
             var response = await httpClient.GetAsync("https://localhost:44362/api/patients");
-            List<Patient> patients = await response.Content.ReadAsAsync<List<Patient>>();
+            IEnumerable<IPatient> patients = await response.Content.ReadAsAsync<List<Patient>>();
 
-            return View();
+            return View(patients);
         }
 
         public ActionResult Appointment()

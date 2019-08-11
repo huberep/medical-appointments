@@ -22,8 +22,8 @@ namespace MedicalAppointments.Web.Api.Test.Controllers
             var sut = new PatientsController(repository);
 
             //Act
-            var result = sut.GetAll() as OkNegotiatedContentResult<List<Patient>>;
-            var patientListResult = result.Content as List<Patient>;
+            var result = sut.GetAll() as OkNegotiatedContentResult<IEnumerable<IPatient>>;
+            var patientListResult = result.Content as IEnumerable<IPatient>;
 
             //Assert
             Assert.IsNotNull(result);
@@ -40,7 +40,7 @@ namespace MedicalAppointments.Web.Api.Test.Controllers
             var expectedResult = 5;
 
             //Act
-            var result = sut.GetAll() as OkNegotiatedContentResult<List<Patient>>;
+            var result = sut.GetAll() as OkNegotiatedContentResult<IEnumerable<IPatient>>;
             var patientListResult = result.Content as List<Patient>;
 
             //Assert

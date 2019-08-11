@@ -22,7 +22,7 @@ namespace MedicalAppointments.Web.Api.Test.Controllers
             var sut = new AppointmentTypesController(repository);
 
             //Act
-            var result = sut.GetAll() as OkNegotiatedContentResult<List<AppointmentType>>;
+            var result = sut.GetAll() as OkNegotiatedContentResult<IEnumerable<IAppointmentType>>;
             var appointmentTypeListResult = result.Content as List<AppointmentType>;
 
             //Assert
@@ -40,7 +40,7 @@ namespace MedicalAppointments.Web.Api.Test.Controllers
             var expectedResult = 4;
 
             //Act
-            var result = sut.GetAll() as OkNegotiatedContentResult<List<AppointmentType>>;
+            var result = sut.GetAll() as OkNegotiatedContentResult<IEnumerable<IAppointmentType>>;
             var appointmentTypeListResult = result.Content as List<AppointmentType>;
 
             //Assert

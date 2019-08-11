@@ -20,7 +20,7 @@ namespace MedicalAppointments.DataAccess.Services
         /// Gets All Patients
         /// </summary>
         /// <returns>List of Patients</returns>
-        public List<Patient> GetAllPatients()
+        public IEnumerable<IPatient> GetAllPatients()
         {
             using (var db = _dbContext)
             {
@@ -33,7 +33,7 @@ namespace MedicalAppointments.DataAccess.Services
         /// Gets All Appointment Types
         /// </summary>
         /// <returns>List of Appointment Types</returns>
-        public List<AppointmentType> GetAllAppointmentTypes()
+        public IEnumerable<IAppointmentType> GetAllAppointmentTypes()
         {
             using (var db = _dbContext)
             {
@@ -60,7 +60,7 @@ namespace MedicalAppointments.DataAccess.Services
         /// Gets All Appointments
         /// </summary>
         /// <returns>List of All Appointments</returns>
-        public List<Appointment> GetAllAppointments()
+        public IEnumerable<IAppointment> GetAllAppointments()
         {
             using (var db = _dbContext)
             {
@@ -88,7 +88,7 @@ namespace MedicalAppointments.DataAccess.Services
         /// </summary>
         /// <param name="patiendId">Patient Id</param>
         /// <returns>List of Appointments</returns>
-        public List<Appointment> GetAppointmentsByPatientId(int patiendId)
+        public IEnumerable<IAppointment> GetAppointmentsByPatientId(int patiendId)
         {
             using (var db = _dbContext)
             {

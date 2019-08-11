@@ -6,12 +6,12 @@ namespace MedicalAppointments.DataAccess.Interfaces
 {
     public interface IRepository
     {
-        List<Patient> GetAllPatients();
-        List<AppointmentType> GetAllAppointmentTypes();
+        IEnumerable<IPatient> GetAllPatients();
+        IEnumerable<IAppointmentType> GetAllAppointmentTypes();
         IAppointmentType GetAppointmentTypeById(int id);
-        List<Appointment> GetAllAppointments();
+        IEnumerable<IAppointment> GetAllAppointments();
         IPatient GetPatientById(int patiendId);
-        List<Appointment> GetAppointmentsByPatientId(int patiendId);
+        IEnumerable<IAppointment> GetAppointmentsByPatientId(int patiendId);
         bool AddPatient(IPatient patient);
         bool AddAppointmentType(IAppointmentType appointmentType);
         bool AddAppointment(IAppointment appointment);
