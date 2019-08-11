@@ -29,7 +29,6 @@ namespace MedicalAppointments.Web.Api.Controllers
         public IHttpActionResult GetAll()
         {
             var result = _repository.GetAllAppointmentTypes();
-
             return Ok(result);
         }
 
@@ -38,18 +37,15 @@ namespace MedicalAppointments.Web.Api.Controllers
         public IHttpActionResult Get(int id)
         {
             var result = _repository.GetAppointmentTypeById(id);
-
             return Ok(result);
         }
 
-        // POST api/<controller>
-        public void Post([FromBody]string value)
+        [HttpPost]
+        [Route("api/appointmentTypes/add")]
+        public IHttpActionResult Add(AppointmentType appointmentType)
         {
-        }
-
-        // PUT api/<controller>/5
-        public void Put(int id, [FromBody]string value)
-        {
+            var result = _repository.AddAppointmentType(appointmentType);
+            return Ok();
         }
     }
 }

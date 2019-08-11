@@ -29,7 +29,6 @@ namespace MedicalAppointments.Web.Api.Controllers
         public IHttpActionResult GetAll()
         {
             var result = _repository.GetAllPatients();
-
             return Ok(result);
         }
 
@@ -38,14 +37,15 @@ namespace MedicalAppointments.Web.Api.Controllers
         public IHttpActionResult Get(int id)
         {
             var result = _repository.GetPatientById(id);
-
             return Ok(result);
         }
 
-
-        // POST api/<controller>
-        public void Post([FromBody]string value)
+        [HttpPost]
+        [Route("api/patients/add")]
+        public IHttpActionResult Add(Patient patient)
         {
+            var result = _repository.AddPatient(patient);
+            return Ok();
         }
     }
 }

@@ -29,7 +29,6 @@ namespace MedicalAppointments.Web.Api.Controllers
         public IHttpActionResult GetAll()
         {
             var result = _repository.GetAllAppointments();
-
             return Ok(result);
         }
 
@@ -38,7 +37,6 @@ namespace MedicalAppointments.Web.Api.Controllers
         public IHttpActionResult Get(int patientId)
         {
             var result = _repository.GetAppointmentsByPatientId(patientId);
-
             return Ok(result);
         }
 
@@ -50,7 +48,6 @@ namespace MedicalAppointments.Web.Api.Controllers
                 return BadRequest("Invalid data.");
 
             var result = _repository.AddAppointment(appointment);
-
             return Ok(result);
         }
 
@@ -62,7 +59,6 @@ namespace MedicalAppointments.Web.Api.Controllers
                 return BadRequest("Invalid data.");
 
             var result = _repository.CancelAppointment(appointment);
-
             return Ok(result);
         }
     }

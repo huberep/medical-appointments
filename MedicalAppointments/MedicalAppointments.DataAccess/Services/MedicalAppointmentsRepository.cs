@@ -26,6 +26,10 @@ namespace MedicalAppointments.DataAccess.Services
             }
         }
 
+        /// <summary>
+        /// Gets All Appointment Types
+        /// </summary>
+        /// <returns>List of Appointment Types</returns>
         public List<AppointmentType> GetAllAppointmentTypes()
         {
             using (var db = _dbContext)
@@ -35,6 +39,11 @@ namespace MedicalAppointments.DataAccess.Services
             }
         }
 
+        /// <summary>
+        /// Gets Appointment Type By Id
+        /// </summary>
+        /// <param name="id">Appointment Id</param>
+        /// <returns>Appointment Type</returns>
         public IAppointmentType GetAppointmentTypeById(int id)
         {
             using (var db = _dbContext)
@@ -44,6 +53,10 @@ namespace MedicalAppointments.DataAccess.Services
             }
         }
 
+        /// <summary>
+        /// Gets All Appointments
+        /// </summary>
+        /// <returns>List of All Appointments</returns>
         public List<Appointment> GetAllAppointments()
         {
             using (var db = _dbContext)
@@ -53,6 +66,11 @@ namespace MedicalAppointments.DataAccess.Services
             }
         }
 
+        /// <summary>
+        /// Gets Patient by Id
+        /// </summary>
+        /// <param name="patiendId">Patient Id</param>
+        /// <returns>Patient</returns>
         public IPatient GetPatientById(int patiendId)
         {
             using (var db = _dbContext)
@@ -62,6 +80,11 @@ namespace MedicalAppointments.DataAccess.Services
             }
         }
 
+        /// <summary>
+        /// Gets Appointment's  Patient
+        /// </summary>
+        /// <param name="patiendId">Patient Id</param>
+        /// <returns>List of Appointments</returns>
         public List<Appointment> GetAppointmentsByPatientId(int patiendId)
         {
             using (var db = _dbContext)
@@ -71,6 +94,11 @@ namespace MedicalAppointments.DataAccess.Services
             }
         }
 
+        /// <summary>
+        /// Adds Patient to Patient Table
+        /// </summary>
+        /// <param name="patient">Patient to Add</param>
+        /// <returns>True whether patient was added, otherwise false</returns>
         public bool AddPatient(IPatient patient)
         {
             using (var db = _dbContext)
@@ -83,6 +111,11 @@ namespace MedicalAppointments.DataAccess.Services
             }
         }
 
+        /// <summary>
+        /// Adds Appointment Type to Appointment Table
+        /// </summary>
+        /// <param name="appointmentType">Appointment Type</param>
+        /// <returns>True whether appointment type was added, otherwise false</returns>
         public bool AddAppointmentType(IAppointmentType appointmentType)
         {
             using (var db = _dbContext)
@@ -95,6 +128,12 @@ namespace MedicalAppointments.DataAccess.Services
             }
         }
 
+        /// <summary>
+        /// Adds Appointment to Appointment Table
+        /// Appointment can be added only when there is not appointment for same day
+        /// </summary>
+        /// <param name="appointment">Appointment to Add</param>
+        /// <returns>True wheter appointment was added, otherwise false</returns>
         public bool AddAppointment(IAppointment appointment)
         {
             using (var db = _dbContext)
@@ -117,6 +156,12 @@ namespace MedicalAppointments.DataAccess.Services
             }
         }
 
+        /// <summary>
+        /// Cancels Appointment
+        /// Appointment can be cancelled only when Appointment Date exceed 24 hours
+        /// </summary>
+        /// <param name="appointment">Appoint to Cancel</param>
+        /// <returns>True whether appointment was cancelled, otherwise false</returns>
         public bool CancelAppointment(IAppointment appointment)
         {
             using (var db = _dbContext)
