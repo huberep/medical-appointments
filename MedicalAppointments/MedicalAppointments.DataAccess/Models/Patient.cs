@@ -19,6 +19,5 @@ namespace MedicalAppointments.DataAccess.Models
         [StringLength(25)]
         public string Lastname { get; set; }
         public DateTime DateOfBirth { get; set; }
-        public List<Appointment> Appointments { get; set; }
     }
 }

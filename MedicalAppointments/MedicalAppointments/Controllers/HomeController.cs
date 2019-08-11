@@ -1,4 +1,8 @@
-﻿using System;
+﻿using MedicalAppointments.DataAccess.Interfaces;
+using MedicalAppointments.DataAccess.Models;
+using MedicalAppointments.DataAccess.Services;
+using MedicalAppointments.Web.Api.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,8 +12,14 @@ namespace MedicalAppointments.Controllers
 {
     public class HomeController : Controller
     {
+
         public ActionResult Index()
         {
+            IRepository repo = new MedicalAppointmentsRepository(new MedicalAppointmentContext());
+            //PatientController patientController = new PatientController(repo);
+
+            //var result = patientController.Get();
+
             return View();
         }
 

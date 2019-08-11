@@ -7,3 +7,5 @@
 /MedicalAppointments/MedicalAppointments/App_Data
 /MedicalAppointments/MedicalAppointments.DataAccess/bin/Debug
 /MedicalAppointments/MedicalAppointments.Tests/bin/Debug
+/MedicalAppointments/MedicalAppointments.Web.Api/bin
+/MedicalAppointments/MedicalAppointments.Web.Api/App_Data

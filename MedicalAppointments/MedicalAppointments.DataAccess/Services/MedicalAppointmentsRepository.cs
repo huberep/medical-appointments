@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MedicalAppointments.DataAccess.Services
 {
-    public class MedicalAppointmentsRepository : IRespository
+    public class MedicalAppointmentsRepository : IRepository
     {
         private IDbContext _dbContext;
 
@@ -17,29 +17,38 @@ namespace MedicalAppointments.DataAccess.Services
             _dbContext = dbContext;
         }
 
-        public IList<IPatient> GetAllPatients()
+        public List<Patient> GetAllPatients()
         {
             using (var db = _dbContext)
             {
-                var patients = db.Patients.ToList() as IList<IPatient>;
+                var patients = db.Patients.ToList();
                 return patients;
             }
         }
 
-        public IList<IAppointmentType> GetAllAppointmentTypes()
+        public List<AppointmentType> GetAllAppointmentTypes()
         {
             using (var db = _dbContext)
             {
-                var appointmentTypes = db.AppointmentTypes.ToList() as IList<IAppointmentType>;
+                var appointmentTypes = db.AppointmentTypes.ToList();
                 return appointmentTypes;
             }
         }
 
-        public IList<IAppointment> GetAllAppointments()
+        public IAppointmentType GetAppointmentTypeById(int id)
         {
             using (var db = _dbContext)
             {
-                var appointments = db.Appointments.ToList() as IList<IAppointment>;
+                var appointmentTypes = db.AppointmentTypes.FirstOrDefault(at => at.Id.Equals(id));
+                return appointmentTypes;
+            }
+        }
+
+        public List<Appointment> GetAllAppointments()
+        {
+            using (var db = _dbContext)
+            {
+                var appointments = db.Appointments.ToList();
                 return appointments;
             }
         }
@@ -53,12 +62,11 @@ namespace MedicalAppointments.DataAccess.Services
             }
         }
 
-        public IList<IAppointment> GetAppointmentsByPatientId(int patiendId)
+        public List<Appointment> GetAppointmentsByPatientId(int patiendId)
         {
             using (var db = _dbContext)
             {
-                //var appointments = db.Appointments.FirstOrDefault(a => a.PatientId.Equals(patiendId) && a.IsActive) as IList<IAppointment>;
-                var appointments = db.Patients.FirstOrDefault(p => p.Id.Equals(patiendId))?.Appointments as IList<IAppointment>;
+                var appointments = db.Appointments.Where(a => a.PatientId.Equals(patiendId) && a.IsActive).ToList();
                 return appointments;
             }
         }
@@ -91,11 +99,40 @@ namespace MedicalAppointments.DataAccess.Services
         {
             using (var db = _dbContext)
             {
-                db.Appointments.Add(appointment as Appointment);
-                var result = db.SaveChanges();
-                var isSaved = result.Equals(1) ? true : false;
+                var isSaved = false;
+
+                var appointments = db.Appointments.Where(a => a.PatientId.Equals(appointment.PatientId) && a.IsActive && a.Date > DateTime.Now).ToList();
+                if (appointments.Count > 0)
+                {
+                    var existsAppointmentForDay = appointments.Exists(a => a.Date.Date.Equals(appointment.Date.Date));
+                    if (!existsAppointmentForDay)
+                    {
+                        db.Appointments.Add(appointment as Appointment);
+                        var result = db.SaveChanges();
+                        isSaved = result.Equals(1) ? true : false;
+                    }
+                }
 
                 return isSaved;
+            }
+        }
+
+        public bool CancelAppointment(IAppointment appointment)
+        {
+            using (var db = _dbContext)
+            {
+                var isCancelled = false;
+
+                var appointmentToCancel = db.Appointments.FirstOrDefault(a => a.Id.Equals(appointment.Id) && a.IsActive);
+                var canBeCancelled = appointmentToCancel?.Date > DateTime.Now.AddHours(24) ? true : false;
+                if (canBeCancelled)
+                {
+                    appointmentToCancel.IsActive = !canBeCancelled;
+                    var result = db.SaveChanges();
+                    isCancelled = result.Equals(1) ? true : false;
+                }
+
+                return isCancelled;
             }
         }
     }

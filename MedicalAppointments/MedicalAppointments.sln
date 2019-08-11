@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicalAppointments.Web.Tes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicalAppointments.DataAccess", "MedicalAppointments.DataAccess\MedicalAppointments.DataAccess.csproj", "{8BC1E79D-3993-4481-BE9F-91541C39390D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicalAppointments.Web.Api", "MedicalAppointments.Web.Api\MedicalAppointments.Web.Api.csproj", "{6224C547-4396-4878-A48F-8360110EFB79}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{8BC1E79D-3993-4481-BE9F-91541C39390D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BC1E79D-3993-4481-BE9F-91541C39390D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BC1E79D-3993-4481-BE9F-91541C39390D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6224C547-4396-4878-A48F-8360110EFB79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6224C547-4396-4878-A48F-8360110EFB79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6224C547-4396-4878-A48F-8360110EFB79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6224C547-4396-4878-A48F-8360110EFB79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

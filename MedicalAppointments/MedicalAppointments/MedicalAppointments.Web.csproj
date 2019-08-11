@@ -265,6 +265,16 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MedicalAppointments.DataAccess\MedicalAppointments.DataAccess.csproj">
+      <Project>{8BC1E79D-3993-4481-BE9F-91541C39390D}</Project>
+      <Name>MedicalAppointments.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MedicalAppointments.Web.Api\MedicalAppointments.Web.Api.csproj">
+      <Project>{6224c547-4396-4878-a48f-8360110efb79}</Project>
+      <Name>MedicalAppointments.Web.Api</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
