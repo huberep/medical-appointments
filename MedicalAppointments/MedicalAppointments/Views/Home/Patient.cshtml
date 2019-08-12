@@ -23,15 +23,7 @@
         .Encoded(false)
         .Sanitized(false)
         .SetWidth(30)
-        .RenderValueAs(o => Html.ActionLink("Manage Appointments", "Appointment", new { id = o.Id }));
+        .RenderValueAs(o => Html.ActionLink("Manage Appointments", "Appointment", new {Id = o.Id, Name = o.Name, Lastname = o.Lastname}));
 
     }).WithPaging(10).Sortable(true)
 </div>
-
-@*<p>Use this area to provide additional information.</p>
-<ul>
-    @foreach (var patient in Model)
-    {
-        <li>@patient.Name</li>
-    }*/
-</ul>*@

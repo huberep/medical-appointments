@@ -1,0 +1,31 @@
+﻿@model MedicalAppointments.Models.AppointmentViewModel
+@{
+    ViewBag.Title = "Create Appointment";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<div class="row">
+    @using (Html.BeginForm("Create", "Home", FormMethod.Post))
+    {
+        <div class="col-md-4">
+            <p>
+                Date
+            </p>
+            <p>@Html.TextBoxFor(m => m.AppointmentTypeName)</p>
+        </div>
+        <div class="col-md-4">
+            <p>
+                Date and Time
+            </p>
+            <p>@Html.TextBoxFor(m => m.Date, new { type = "date"})</p>
+        </div>
+        <div class="col-md-4">
+            <input type="submit" value="Create" />
+        </div>
+    }
+
+    @*<div class="col-md-8">
+        <label class="control-label col-md-6">Final Rate: ${{FinalRate}}</label>
+    </div>*@
+</div>

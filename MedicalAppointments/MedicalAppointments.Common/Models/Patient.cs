@@ -1,6 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using MedicalAppointments.DataAccess.Interfaces;
+using MedicalAppointments.Common.Interfaces;
 
 namespace MedicalAppointments.Common.Models
 {

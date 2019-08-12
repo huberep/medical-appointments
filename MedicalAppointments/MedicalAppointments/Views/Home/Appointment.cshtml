@@ -1,17 +1,29 @@
-﻿@{
-    ViewBag.Title = "Contact";
+﻿@model IEnumerable<MedicalAppointments.Models.AppointmentViewModel>
+@using GridMvc.Html
+@{
+    ViewBag.Title = "Appointment List";
 }
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<link href="@Url.Content("~/Content/Gridmvc.css")" rel="stylesheet" />
+<link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" />
+<script src="@Url.Content("~/Scripts/jquery-3.3.1.min.js")"></script>
+<script src="@Url.Content("~/Scripts/gridmvc.min.js")"></script>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+@Html.ActionLink("Create Appointment", "AddAppointment")
+
+<div class="code-cut">
+    @Html.Grid(Model).Columns(Columns =>
+    {
+        Columns.Add(c => c.Id).Titled("Id").Filterable(true);
+        Columns.Add(c => c.AppointmentTypeName).Titled("Appointment Type").Filterable(true);
+        Columns.Add(c => c.Date).Titled("Date and Time").Filterable(true);
+        Columns.Add()
+        .Encoded(false)
+        .Sanitized(false)
+        .SetWidth(30)
+        .RenderValueAs(o => o.CanBeCancelled ? Html.ActionLink("Cancel Appointment", "Cancel", new { Id = o.Id }) : new HtmlString("Can't be cancelled"));
+
+    }).WithPaging(10).Sortable(true)
+</div>

@@ -172,7 +172,7 @@ namespace MedicalAppointments.DataAccess.Services
                 var isCancelled = false;
 
                 var appointmentToCancel = db.Appointments.FirstOrDefault(a => a.Id.Equals(appointment.Id) && a.IsActive);
-                var canBeCancelled = appointmentToCancel?.Date > DateTime.Now.AddHours(24) ? true : false;
+                var canBeCancelled = appointmentToCancel?.Date < DateTime.Now.AddHours(24) ? true : false;
                 if (canBeCancelled)
                 {
                     appointmentToCancel.IsActive = !canBeCancelled;

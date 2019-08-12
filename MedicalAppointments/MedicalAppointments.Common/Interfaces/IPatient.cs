@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MedicalAppointments.DataAccess.Interfaces
+namespace MedicalAppointments.Common.Interfaces
 {
     public interface IPatient
     {
