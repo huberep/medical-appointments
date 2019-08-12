@@ -2,9 +2,8 @@
 
 namespace MedicalAppointments.Common.Interfaces
 {
-    public interface IAppointment
+    public interface IAppointment : IModel
     {
-        int Id { get; set; }
         DateTime Date { get; set; }
         bool IsActive { get; set; }
         int PatientId { get; set; }

@@ -1,4 +1,6 @@
-﻿using System.Web.Http;
+﻿using System.Collections.Generic;
+using System.Web.Http;
+using MedicalAppointments.Common.Interfaces;
 using MedicalAppointments.Common.Models;
 using MedicalAppointments.DataAccess.Interfaces;
 using MedicalAppointments.DataAccess.Models;
@@ -13,7 +15,7 @@ namespace MedicalAppointments.Web.Api.Controllers
 
         public AppointmentsController()
         {
-            _repository = new MedicalAppointmentsRepository(new MedicalAppointmentContext());
+            _repository = new AppointmentRepository(new MedicalAppointmentContext());
         }
 
         public AppointmentsController(IRepository repository)
@@ -25,7 +27,7 @@ namespace MedicalAppointments.Web.Api.Controllers
         [Route("api/appointments")]
         public IHttpActionResult GetAll()
         {
-            var result = _repository.GetAllAppointments();
+            var result = _repository.GetAll() as IEnumerable<IAppointment>;
             return Ok(result);
         }
 
@@ -33,7 +35,7 @@ namespace MedicalAppointments.Web.Api.Controllers
         [Route("api/appointments/{patientId}")]
         public IHttpActionResult Get(int patientId)
         {
-            var result = _repository.GetAppointmentsByPatientId(patientId);
+            var result = (_repository as AppointmentRepository).GetByPatientId(patientId) as IEnumerable<IAppointment>;
             return Ok(result);
         }
 
@@ -44,7 +46,7 @@ namespace MedicalAppointments.Web.Api.Controllers
             if (!ModelState.IsValid || !MedicalAppointmentsApiUtilities.IsValid(appointment))
                 return BadRequest("Invalid data.");
 
-            var result = _repository.AddAppointment(appointment);
+            var result = _repository.Add(appointment);
             return Ok(result);
         }
 
@@ -55,7 +57,7 @@ namespace MedicalAppointments.Web.Api.Controllers
             if (!ModelState.IsValid || !MedicalAppointmentsApiUtilities.IsValid(appointment))
                 return BadRequest("Invalid data.");
 
-            var result = _repository.CancelAppointment(appointment);
+            var result = (_repository as AppointmentRepository).Cancel(appointment);
             return Ok(result);
         }
     }

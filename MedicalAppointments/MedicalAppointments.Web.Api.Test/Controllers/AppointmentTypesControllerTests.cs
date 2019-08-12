@@ -18,7 +18,7 @@ namespace MedicalAppointments.Web.Api.Test.Controllers
         {
             //Arrage
             IDbContext dbContext = new MedicalAppointmentContext();
-            IRepository repository = new MedicalAppointmentsRepository(dbContext);
+            IRepository repository = new AppointmentTypeRepository(dbContext);
             var sut = new AppointmentTypesController(repository);
 
             //Act
@@ -35,7 +35,7 @@ namespace MedicalAppointments.Web.Api.Test.Controllers
         {
             //Arrage
             IDbContext dbContext = new MedicalAppointmentContext();
-            IRepository repository = new MedicalAppointmentsRepository(dbContext);
+            IRepository repository = new AppointmentTypeRepository(dbContext);
             var sut = new AppointmentTypesController(repository);
             var expectedResult = 4;
 
@@ -52,7 +52,7 @@ namespace MedicalAppointments.Web.Api.Test.Controllers
         {
             //Arrage
             IDbContext dbContext = new MedicalAppointmentContext();
-            IRepository repository = new MedicalAppointmentsRepository(dbContext);
+            IRepository repository = new AppointmentTypeRepository(dbContext);
             var sut = new AppointmentTypesController(repository);
 
             //Act
@@ -69,7 +69,7 @@ namespace MedicalAppointments.Web.Api.Test.Controllers
         {
             //Arrage
             IDbContext dbContext = new MedicalAppointmentContext();
-            IRepository repository = new MedicalAppointmentsRepository(dbContext);
+            IRepository repository = new AppointmentTypeRepository(dbContext);
             var sut = new AppointmentTypesController(repository);
             var expectedResult = new AppointmentType() { Id = 1, Name = "Medicina General" };
 
@@ -87,7 +87,7 @@ namespace MedicalAppointments.Web.Api.Test.Controllers
         {
             //Arrage
             IDbContext dbContext = new MedicalAppointmentContext();
-            IRepository repository = new MedicalAppointmentsRepository(dbContext);
+            IRepository repository = new AppointmentTypeRepository(dbContext);
             var sut = new AppointmentTypesController(repository);
             var appointmentTypeToAdd = new AppointmentType();
 

@@ -20,7 +20,7 @@ namespace MedicalAppointments.Web.Api.Test.Controllers
         {
             //Arrage
             IDbContext dbContext = new MedicalAppointmentContext();
-            IRepository repository = new MedicalAppointmentsRepository(dbContext);
+            IRepository repository = new AppointmentRepository(dbContext);
             var sut = new AppointmentsController(repository);
 
             //Act
@@ -37,7 +37,7 @@ namespace MedicalAppointments.Web.Api.Test.Controllers
         {
             //Arrage
             IDbContext dbContext = new MedicalAppointmentContext();
-            IRepository repository = new MedicalAppointmentsRepository(dbContext);
+            IRepository repository = new AppointmentRepository(dbContext);
             var sut = new AppointmentsController(repository);
             var expectedResult = 6;
 
@@ -54,7 +54,7 @@ namespace MedicalAppointments.Web.Api.Test.Controllers
         {
             //Arrage
             IDbContext dbContext = new MedicalAppointmentContext();
-            IRepository repository = new MedicalAppointmentsRepository(dbContext);
+            IRepository repository = new AppointmentRepository(dbContext);
             var sut = new AppointmentsController(repository);
 
             //Act
@@ -71,7 +71,7 @@ namespace MedicalAppointments.Web.Api.Test.Controllers
         {
             //Arrage
             IDbContext dbContext = new MedicalAppointmentContext();
-            IRepository repository = new MedicalAppointmentsRepository(dbContext);
+            IRepository repository = new AppointmentRepository(dbContext);
             var sut = new AppointmentsController(repository);
             var expectedResult = 1;
 
@@ -88,7 +88,7 @@ namespace MedicalAppointments.Web.Api.Test.Controllers
         {
             //Arrage
             IDbContext dbContext = new MedicalAppointmentContext();
-            IRepository repository = new MedicalAppointmentsRepository(dbContext);
+            IRepository repository = new AppointmentRepository(dbContext);
             var sut = new AppointmentsController(repository);
             var expectedResult = new Appointment() { Id = 1, PatientId = 1, AppointmentTypeId = 1, Date = new DateTime(2019, 8, 10, 12, 30, 00), IsActive = true };
 
@@ -110,7 +110,7 @@ namespace MedicalAppointments.Web.Api.Test.Controllers
         {
             //Arrage
             IDbContext dbContext = new MedicalAppointmentContext();
-            IRepository repository = new MedicalAppointmentsRepository(dbContext);
+            IRepository repository = new AppointmentRepository(dbContext);
             var sut = new AppointmentsController(repository);
             var appointmentToAdd = new Appointment();
             
@@ -126,7 +126,7 @@ namespace MedicalAppointments.Web.Api.Test.Controllers
         {
             //Arrage
             IDbContext dbContext = new MedicalAppointmentContext();
-            IRepository repository = new MedicalAppointmentsRepository(dbContext);
+            IRepository repository = new AppointmentRepository(dbContext);
             var sut = new AppointmentsController(repository);
             var appointmentToAdd = new Appointment() { Id = 4, PatientId = 2, AppointmentTypeId = 4, Date = new DateTime(2019, 8, 11, 15, 30, 00), IsActive = true };
 
@@ -142,7 +142,7 @@ namespace MedicalAppointments.Web.Api.Test.Controllers
         {
             //Arrage
             IDbContext dbContext = new MedicalAppointmentContext();
-            IRepository repository = new MedicalAppointmentsRepository(dbContext);
+            IRepository repository = new AppointmentRepository(dbContext);
             var sut = new AppointmentsController(repository);
             var appointmentToCancel = new Appointment();
 
@@ -154,11 +154,11 @@ namespace MedicalAppointments.Web.Api.Test.Controllers
         }
 
         [TestMethod()]
-        public void CancelAppointment_AppointmentDateLessThan24Hours_NotCancelled_Test()
+        public void CancelAppointment_AppointmentDateMoreThan24Hours_NotCancelled_Test()
         {
             //Arrage
             IDbContext dbContext = new MedicalAppointmentContext();
-            IRepository repository = new MedicalAppointmentsRepository(dbContext);
+            IRepository repository = new AppointmentRepository(dbContext);
             var sut = new AppointmentsController(repository);
             var appointmentToCancel = new Appointment() { Id = 4, PatientId = 2, AppointmentTypeId = 4, Date = new DateTime(2019, 8, 11, 15, 30, 00), IsActive = true };
 

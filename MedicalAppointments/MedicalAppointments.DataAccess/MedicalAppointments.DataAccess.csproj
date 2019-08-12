@@ -54,7 +54,9 @@
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\MedicalAppointmentsRepository.cs" />
+    <Compile Include="Services\AppointmentRepository.cs" />
+    <Compile Include="Services\AppointmentTypeRepository.cs" />
+    <Compile Include="Services\PatientRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

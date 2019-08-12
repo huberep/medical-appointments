@@ -1,4 +1,6 @@
-﻿using System.Web.Http;
+﻿using System.Collections.Generic;
+using System.Web.Http;
+using MedicalAppointments.Common.Interfaces;
 using MedicalAppointments.Common.Models;
 using MedicalAppointments.DataAccess.Interfaces;
 using MedicalAppointments.DataAccess.Models;
@@ -13,7 +15,7 @@ namespace MedicalAppointments.Web.Api.Controllers
 
         public PatientsController()
         {
-            _repository = new MedicalAppointmentsRepository(new MedicalAppointmentContext());
+            _repository = new PatientRepository(new MedicalAppointmentContext());
         }
 
         public PatientsController(IRepository repository)
@@ -25,7 +27,7 @@ namespace MedicalAppointments.Web.Api.Controllers
         [Route("api/patients")]
         public IHttpActionResult GetAll()
         {
-            var result = _repository.GetAllPatients();
+            var result = _repository.GetAll() as IEnumerable<IPatient>;
             return Ok(result);
         }
 
@@ -33,7 +35,7 @@ namespace MedicalAppointments.Web.Api.Controllers
         [Route("api/patients/{id}")]
         public IHttpActionResult Get(int id)
         {
-            var result = _repository.GetPatientById(id);
+            var result = _repository.GetById(id) as IPatient;
             return Ok(result);
         }
 
@@ -44,7 +46,7 @@ namespace MedicalAppointments.Web.Api.Controllers
             if (!ModelState.IsValid || !MedicalAppointmentsApiUtilities.IsValid(patient))
                 return BadRequest("Invalid data.");
 
-            var result = _repository.AddPatient(patient);
+            var result = _repository.Add(patient);
             return Ok();
         }
     }

@@ -1,8 +1,7 @@
 ﻿namespace MedicalAppointments.Common.Interfaces
 {
-    public interface IAppointmentType
+    public interface IAppointmentType : IModel
     {
-        int Id { get; set; }
         string Name { get; set; }
     }
 }

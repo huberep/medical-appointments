@@ -19,7 +19,7 @@ namespace MedicalAppointments.Web.Api.Test.Controllers
         {
             //Arrage
             IDbContext dbContext = new MedicalAppointmentContext();
-            IRepository repository = new MedicalAppointmentsRepository(dbContext);
+            IRepository repository = new PatientRepository(dbContext);
             var sut = new PatientsController(repository);
 
             //Act
@@ -36,7 +36,7 @@ namespace MedicalAppointments.Web.Api.Test.Controllers
         {
             //Arrage
             IDbContext dbContext = new MedicalAppointmentContext();
-            IRepository repository = new MedicalAppointmentsRepository(dbContext);
+            IRepository repository = new PatientRepository(dbContext);
             var sut = new PatientsController(repository);
             var expectedResult = 5;
 
@@ -53,7 +53,7 @@ namespace MedicalAppointments.Web.Api.Test.Controllers
         {
             //Arrage
             IDbContext dbContext = new MedicalAppointmentContext();
-            IRepository repository = new MedicalAppointmentsRepository(dbContext);
+            IRepository repository = new PatientRepository(dbContext);
             var sut = new PatientsController(repository);
             
             //Act
@@ -70,7 +70,7 @@ namespace MedicalAppointments.Web.Api.Test.Controllers
         {
             //Arrage
             IDbContext dbContext = new MedicalAppointmentContext();
-            IRepository repository = new MedicalAppointmentsRepository(dbContext);
+            IRepository repository = new PatientRepository(dbContext);
             var sut = new PatientsController(repository);
             var expectedResult = new Patient() { Id = 1, IdCard = "206680338", Name = "Huber", Lastname = "Espinoza", DateOfBirth = new DateTime(1989, 11, 8) };
 
@@ -91,7 +91,7 @@ namespace MedicalAppointments.Web.Api.Test.Controllers
         {
             //Arrage
             IDbContext dbContext = new MedicalAppointmentContext();
-            IRepository repository = new MedicalAppointmentsRepository(dbContext);
+            IRepository repository = new PatientRepository(dbContext);
             var sut = new PatientsController(repository);
             var patientToAdd = new Patient();
 
