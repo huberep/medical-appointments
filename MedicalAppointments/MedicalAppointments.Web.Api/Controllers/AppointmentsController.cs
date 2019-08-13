@@ -11,10 +11,11 @@ namespace MedicalAppointments.Web.Api.Controllers
 {
     public class AppointmentsController : ApiController
     {
-        private IRepository _repository;
+        private readonly IRepository _repository;
 
         public AppointmentsController()
         {
+            //TODO: I need to use Ninject to inject this dependencies
             _repository = new AppointmentRepository(new MedicalAppointmentContext());
         }
 
@@ -32,16 +33,24 @@ namespace MedicalAppointments.Web.Api.Controllers
         }
 
         [HttpGet]
-        [Route("api/appointments/{patientId}")]
-        public IHttpActionResult Get(int patientId)
+        [Route("api/appointments/patient/{patientId}")]
+        public IHttpActionResult GetByPatientId(int patientId)
         {
             var result = (_repository as AppointmentRepository).GetByPatientId(patientId) as IEnumerable<IAppointment>;
             return Ok(result);
         }
 
+        [HttpGet]
+        [Route("api/appointments/{id}")]
+        public IHttpActionResult Get(int id)
+        {
+            var result = _repository.GetById(id) as IEnumerable<IAppointment>;
+            return Ok(result);
+        }
+
         [HttpPost]
         [Route("api/appointments/add")]
-        public IHttpActionResult Add(Appointment appointment)
+        public IHttpActionResult Add([FromBody] Appointment appointment)
         {
             if (!ModelState.IsValid || !MedicalAppointmentsApiUtilities.IsValid(appointment))
                 return BadRequest("Invalid data.");
@@ -50,14 +59,14 @@ namespace MedicalAppointments.Web.Api.Controllers
             return Ok(result);
         }
 
-        [HttpPut]
+        [HttpPost]
         [Route("api/appointments/cancel")]
-        public IHttpActionResult Cancel(Appointment appointment)
+        public IHttpActionResult Cancel([FromBody] Appointment appointment)
         {
             if (!ModelState.IsValid || !MedicalAppointmentsApiUtilities.IsValid(appointment))
                 return BadRequest("Invalid data.");
 
-            var result = (_repository as AppointmentRepository).Cancel(appointment);
+            var result = (_repository as AppointmentRepository).Cancel(appointment) as IAppointment;
             return Ok(result);
         }
     }

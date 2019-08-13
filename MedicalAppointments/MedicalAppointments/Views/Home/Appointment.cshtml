@@ -3,27 +3,28 @@
 @{
     ViewBag.Title = "Appointment List";
 }
-<h2>@ViewBag.Title.</h2>
+<h2>@ViewBag.Title</h2>
 <h3>@ViewBag.Message</h3>
 
 <link href="@Url.Content("~/Content/Gridmvc.css")" rel="stylesheet" />
 <link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" />
 <script src="@Url.Content("~/Scripts/jquery-3.3.1.min.js")"></script>
 <script src="@Url.Content("~/Scripts/gridmvc.min.js")"></script>
+<script src="@Url.Content("~/Scripts/bootstrap.min.js")"></script>
 
-@Html.ActionLink("Create Appointment", "AddAppointment")
+@Html.ActionLink("Add Appointment", "AddAppointment", new { id = @ViewBag.PatiendId})
 
 <div class="code-cut">
     @Html.Grid(Model).Columns(Columns =>
     {
         Columns.Add(c => c.Id).Titled("Id").Filterable(true);
-        Columns.Add(c => c.AppointmentTypeName).Titled("Appointment Type").Filterable(true);
+        Columns.Add(c => c.AppointmentType.Name).Titled("Appointment Type").Filterable(true);
         Columns.Add(c => c.Date).Titled("Date and Time").Filterable(true);
         Columns.Add()
         .Encoded(false)
         .Sanitized(false)
         .SetWidth(30)
-        .RenderValueAs(o => o.CanBeCancelled ? Html.ActionLink("Cancel Appointment", "Cancel", new { Id = o.Id }) : new HtmlString("Can't be cancelled"));
+        .RenderValueAs(o => o.CanBeCancelled ? Html.ActionLink("Cancel Appointment", "Cancel", new { id = o.Id, patientId = o.PatientId }) : new HtmlString("Can't be cancelled"));
 
     }).WithPaging(10).Sortable(true)
 </div>

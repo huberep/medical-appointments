@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using MedicalAppointments.Common.Interfaces;
+using MedicalAppointments.Common.Models;
 using MedicalAppointments.Models;
 
 namespace MedicalAppointments.Utilities
@@ -15,8 +16,8 @@ namespace MedicalAppointments.Utilities
             {
                 foreach (var appointment in appointments)
                 {
-                    var appointmentTypeName = appointmentTypes.FirstOrDefault(at => at.Id.Equals(appointment.AppointmentTypeId))?.Name;
-                    var appointmentViewModel = new AppointmentViewModel(appointment.Id, appointmentTypeName, appointment.Date);
+                    var appointmentType = appointmentTypes.FirstOrDefault(at => at.Id.Equals(appointment.AppointmentTypeId)) as AppointmentType;
+                    var appointmentViewModel = new AppointmentViewModel(appointment.Id, appointment.PatientId, appointmentType, appointment.Date);
                     result.Add(appointmentViewModel);
                 }
             }

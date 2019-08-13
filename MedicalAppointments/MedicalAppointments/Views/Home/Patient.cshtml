@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "Patient List";
 }
-<h2>@ViewBag.Title.</h2>
+<h2>@ViewBag.Title</h2>
 <h3>@ViewBag.Message</h3>
 
 <link href="@Url.Content("~/Content/Gridmvc.css")" rel="stylesheet" />
@@ -23,7 +23,7 @@
         .Encoded(false)
         .Sanitized(false)
         .SetWidth(30)
-        .RenderValueAs(o => Html.ActionLink("Manage Appointments", "Appointment", new {Id = o.Id, Name = o.Name, Lastname = o.Lastname}));
+        .RenderValueAs(o => Html.ActionLink("Manage Appointments", "Appointment", new {id = o.Id}));
 
     }).WithPaging(10).Sortable(true)
 </div>

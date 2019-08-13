@@ -58,7 +58,7 @@ namespace MedicalAppointments.Web.Api.Test.Controllers
             var sut = new AppointmentsController(repository);
 
             //Act
-            var result = sut.Get(1) as OkNegotiatedContentResult<IEnumerable<IAppointment>>;
+            var result = sut.GetByPatientId(1) as OkNegotiatedContentResult<IEnumerable<IAppointment>>;
             var appointmentListResult = result.Content as List<Appointment>;
 
             //Assert
@@ -76,7 +76,7 @@ namespace MedicalAppointments.Web.Api.Test.Controllers
             var expectedResult = 1;
 
             //Act
-            var result = sut.Get(1) as OkNegotiatedContentResult<IEnumerable<IAppointment>>;
+            var result = sut.GetByPatientId(1) as OkNegotiatedContentResult<IEnumerable<IAppointment>>;
             var appointmentListResult = result.Content as List<Appointment>;
             
             //Assert
@@ -93,7 +93,7 @@ namespace MedicalAppointments.Web.Api.Test.Controllers
             var expectedResult = new Appointment() { Id = 1, PatientId = 1, AppointmentTypeId = 1, Date = new DateTime(2019, 8, 10, 12, 30, 00), IsActive = true };
 
             //Act
-            var result = sut.Get(1) as OkNegotiatedContentResult<IEnumerable<IAppointment>>;
+            var result = sut.GetByPatientId(1) as OkNegotiatedContentResult<IEnumerable<IAppointment>>;
             var appointmentListResult = result.Content as List<Appointment>;
             var appointmentResult = appointmentListResult.First();
 

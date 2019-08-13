@@ -24,7 +24,7 @@ namespace MedicalAppointments.DataAccess.Services
                 var appointment = model as Appointment;
 
                 var appointments = db.Appointments.Where(a => a.PatientId.Equals(appointment.PatientId) && a.IsActive && a.Date > DateTime.Now).ToList();
-                if (appointments.Count > 0)
+                if (appointments != null)
                 {
                     var existsAppointmentForDay = appointments.Exists(a => a.Date.Date.Equals(appointment.Date.Date));
                     if (!existsAppointmentForDay)
@@ -39,23 +39,19 @@ namespace MedicalAppointments.DataAccess.Services
             }
         }
 
-        public bool Cancel(IModel model)
+        public IModel Cancel(IModel model)
         {
             using (var db = _dbContext)
             {
-                var isCancelled = false;
-                var appointment = model as Appointment;
-
-                var appointmentToCancel = db.Appointments.FirstOrDefault(a => a.Id.Equals(appointment.Id) && a.IsActive);
+                var appointmentToCancel = db.Appointments.FirstOrDefault(a => a.Id.Equals((model as Appointment).Id) && a.IsActive);
                 var canBeCancelled = appointmentToCancel?.Date < DateTime.Now.AddHours(24) ? true : false;
                 if (canBeCancelled)
                 {
                     appointmentToCancel.IsActive = !canBeCancelled;
                     var result = db.SaveChanges();
-                    isCancelled = result.Equals(1) ? true : false;
                 }
 
-                return isCancelled;
+                return appointmentToCancel;
             }
         }
 

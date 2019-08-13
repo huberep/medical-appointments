@@ -11,13 +11,13 @@ namespace MedicalAppointments.Web.Api.Controllers
 {
     public class PatientsController : ApiController
     {
-        private IRepository _repository;
+        private readonly IRepository _repository;
 
         public PatientsController()
         {
+            //TODO: I need to use Ninject to inject this dependencies
             _repository = new PatientRepository(new MedicalAppointmentContext());
         }
-
         public PatientsController(IRepository repository)
         {
             _repository = repository;
