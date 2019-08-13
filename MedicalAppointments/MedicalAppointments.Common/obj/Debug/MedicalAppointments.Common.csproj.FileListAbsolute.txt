@@ -3,3 +3,4 @@ C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalApp
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Common\obj\Debug\MedicalAppointments.Common.csproj.CoreCompileInputs.cache
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Common\obj\Debug\MedicalAppointments.Common.dll
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Common\obj\Debug\MedicalAppointments.Common.pdb
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Common\obj\Debug\MedicalAppointments.Common.csprojAssemblyReference.cache

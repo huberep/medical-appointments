@@ -15,7 +15,7 @@ namespace MedicalAppointments.Web.Api.Controllers
 
         public AppointmentTypesController()
         {
-            //TODO: I need to use Ninject to inject this dependencies
+            //TODO: Need to use Ninject to inject this dependencies and remove this constructor
             _repository = new AppointmentTypeRepository(new MedicalAppointmentContext());
         }
 

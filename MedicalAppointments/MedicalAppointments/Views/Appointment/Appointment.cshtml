@@ -20,6 +20,7 @@
         Columns.Add(c => c.Id).Titled("Id").Filterable(true);
         Columns.Add(c => c.AppointmentType.Name).Titled("Appointment Type").Filterable(true);
         Columns.Add(c => c.Date).Titled("Date and Time").Filterable(true);
+        Columns.Add(c => c.Status).Titled("Active").Filterable(true);
         Columns.Add()
         .Encoded(false)
         .Sanitized(false)

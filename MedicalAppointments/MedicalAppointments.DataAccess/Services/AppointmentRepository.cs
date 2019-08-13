@@ -7,7 +7,7 @@ using MedicalAppointments.DataAccess.Interfaces;
 
 namespace MedicalAppointments.DataAccess.Services
 {
-    public class AppointmentRepository : IRepository/*, IRepositoryCancel, IRespositoryGetByIdMultiple*/
+    public class AppointmentRepository : IRepository
     {
         private IDbContext _dbContext;
 
@@ -23,7 +23,7 @@ namespace MedicalAppointments.DataAccess.Services
                 var isSaved = false;
                 var appointment = model as Appointment;
 
-                var appointments = db.Appointments.Where(a => a.PatientId.Equals(appointment.PatientId) && a.IsActive && a.Date > DateTime.Now).ToList();
+                var appointments = db.Appointments.Where(a => a.PatientId.Equals(appointment.PatientId) && a.IsActive).ToList();
                 if (appointments != null)
                 {
                     var existsAppointmentForDay = appointments.Exists(a => a.Date.Date.Equals(appointment.Date.Date));
@@ -59,7 +59,7 @@ namespace MedicalAppointments.DataAccess.Services
         {
             using (var db = _dbContext)
             {
-                var appointments = db.Appointments.ToList();
+                var appointments = db.Appointments.ToList().OrderByDescending(a => a.Date);
                 return appointments;
             }
         }
@@ -78,7 +78,7 @@ namespace MedicalAppointments.DataAccess.Services
             var patiendId = id;
             using (var db = _dbContext)
             {
-                var appointments = db.Appointments.Where(a => a.PatientId.Equals(patiendId) && a.IsActive).ToList();
+                var appointments = db.Appointments.Where(a => a.PatientId.Equals(patiendId)).ToList().OrderByDescending(a => a.Date); ;
                 return appointments;
             }
         }

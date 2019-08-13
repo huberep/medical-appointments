@@ -17,7 +17,7 @@ namespace MedicalAppointments.Utilities
                 foreach (var appointment in appointments)
                 {
                     var appointmentType = appointmentTypes.FirstOrDefault(at => at.Id.Equals(appointment.AppointmentTypeId)) as AppointmentType;
-                    var appointmentViewModel = new AppointmentViewModel(appointment.Id, appointment.PatientId, appointmentType, appointment.Date);
+                    var appointmentViewModel = new AppointmentViewModel(appointment.Id, appointment.PatientId, appointmentType, appointment.Date, appointment.IsActive);
                     result.Add(appointmentViewModel);
                 }
             }

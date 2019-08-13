@@ -1,0 +1,29 @@
+﻿@model IEnumerable<MedicalAppointments.Common.Models.Patient>
+@using GridMvc.Html
+@{
+    ViewBag.Title = "Patient List";
+}
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+
+<link href="@Url.Content("~/Content/Gridmvc.css")" rel="stylesheet" />
+<link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" />
+<script src="@Url.Content("~/Scripts/jquery-3.3.1.min.js")"></script>
+<script src="@Url.Content("~/Scripts/gridmvc.min.js")"></script>
+
+<div class="code-cut">
+    @Html.Grid(Model).Columns(Columns =>
+{
+    Columns.Add(c => c.Id).Titled("Id").Filterable(true);
+    Columns.Add(c => c.IdCard).Titled("IdCard").Filterable(true);
+    Columns.Add(c => c.Name).Titled("Name").Filterable(true);
+    Columns.Add(c => c.Lastname).Titled("Lastname").Filterable(true);
+    Columns.Add(c => c.DateOfBirth).Titled("Date of Birth").Filterable(true);
+    Columns.Add()
+    .Encoded(false)
+    .Sanitized(false)
+    .SetWidth(30)
+    .RenderValueAs(o => Html.ActionLink("Manage Appointments", "Appointment", "Appointment", new {id = o.Id}, new { }));
+
+}).WithPaging(10).Sortable(true)
+</div>

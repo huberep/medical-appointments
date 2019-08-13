@@ -10,11 +10,13 @@
     <div class="row">
         <div class="col-md-8">
             <section id="loginForm">
-                @using (Html.BeginForm("Add", "Home", FormMethod.Post))
+                @*//TODO: Need to add validators to the fields*@
+                @using (Html.BeginForm("Add", "Appointment", FormMethod.Post))
                 {
                     <div class="form-group">
                         <span class="col-md-2 control-label">Type Id:</span>
                         <div class="col-md-10">
+                            @*TODO: Need to consume /api/appointmentTypes/ service using AJAX JQuerry to load a dropdown with the list of AppointmentTypes*@
                             <input type="text" name="appointmentTypeId" class="form-control" />
                         </div>
                     </div>

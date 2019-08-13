@@ -40,8 +40,7 @@ namespace MedicalAppointments.DataAccess.Migrations
 
                 new Appointment() { Id = 5, PatientId = 4, AppointmentTypeId = 3, Date = new DateTime(2019, 8, 10, 16, 00, 00), IsActive = true },  // 4.María - 3.Pediatría - Active
 
-                new Appointment() { Id = 6, PatientId = 3, AppointmentTypeId = 1, Date = new DateTime(2019, 8, 11, 7, 20, 00), IsActive = false },   // 3.Ana - 1.General - Cancelled
-                new Appointment() { Id = 7, PatientId = 1, AppointmentTypeId = 4, Date = new DateTime(2019, 8, 12, 11, 15, 00), IsActive = true } 
+                new Appointment() { Id = 6, PatientId = 3, AppointmentTypeId = 1, Date = new DateTime(2019, 8, 11, 7, 20, 00), IsActive = false }   // 3.Ana - 1.General - Cancelled
             );
         }
     }

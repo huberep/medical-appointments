@@ -15,9 +15,10 @@ namespace MedicalAppointments.Web.Api.Controllers
 
         public PatientsController()
         {
-            //TODO: I need to use Ninject to inject this dependencies
+            //TODO: Need to use Ninject to inject this dependencies and remove this constructor
             _repository = new PatientRepository(new MedicalAppointmentContext());
         }
+
         public PatientsController(IRepository repository)
         {
             _repository = repository;

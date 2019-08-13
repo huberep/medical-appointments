@@ -26,7 +26,7 @@ namespace MedicalAppointments.DataAccess.Services
                 return isSaved;
             }
         }
-
+        
         public IEnumerable<IModel> GetAll()
         {
             using (var db = _dbContext)

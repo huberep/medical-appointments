@@ -5,7 +5,9 @@ namespace MedicalAppointments.Web.Api.App_Start
 {
     using System;
     using System.Web;
-
+    using MedicalAppointments.DataAccess.Interfaces;
+    using MedicalAppointments.DataAccess.Models;
+    using MedicalAppointments.DataAccess.Services;
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 
     using Ninject;
@@ -62,6 +64,11 @@ namespace MedicalAppointments.Web.Api.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             //TODO: Register respositories and dbcontext 
+
+            //kernel.Bind<IDbContext>().To<MedicalAppointmentContext>();
+            //kernel.Bind<IRepository>().To<PatientRepository>();
+            //kernel.Bind<IRepository>().To<AppointmentRepository>();
+            //kernel.Bind<IRepository>().To<AppointmentTypeRepository>();
         }        
     }
 }
