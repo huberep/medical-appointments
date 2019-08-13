@@ -79,11 +79,11 @@ namespace MedicalAppointments.Controllers
                 var result = cancelTask.Result;
                 if (result.IsSuccessStatusCode)
                 {
-                    return View("Appointment", new { id = patientId });
+                    return RedirectToAction("Appointment", new { id = patientId });
                 }
             }
 
-            return View("Appointment", new { id = patientId });
+            return RedirectToAction("Appointment", new { id = patientId });
         }
 
         [HttpPost]

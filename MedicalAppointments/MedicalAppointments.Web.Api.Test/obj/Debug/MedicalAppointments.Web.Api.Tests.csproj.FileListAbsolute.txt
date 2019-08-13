@@ -6,6 +6,7 @@ C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalApp
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Web.Api.Test\bin\Debug\MedicalAppointments.Web.Api.Test.pdb
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Web.Api.Test\bin\Debug\EntityFramework.dll
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Web.Api.Test\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Web.Api.Test\bin\Debug\MedicalAppointments.Common.dll
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Web.Api.Test\bin\Debug\MedicalAppointments.DataAccess.dll
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Web.Api.Test\bin\Debug\MedicalAppointments.Web.Api.dll
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Web.Api.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
@@ -14,6 +15,7 @@ C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalApp
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Web.Api.Test\bin\Debug\System.Net.Http.Formatting.dll
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Web.Api.Test\bin\Debug\System.Web.Http.dll
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Web.Api.Test\bin\Debug\System.Web.Http.WebHost.dll
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Web.Api.Test\bin\Debug\MedicalAppointments.Common.pdb
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Web.Api.Test\bin\Debug\MedicalAppointments.DataAccess.pdb
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Web.Api.Test\bin\Debug\MedicalAppointments.DataAccess.dll.config
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Web.Api.Test\bin\Debug\MedicalAppointments.Web.Api.pdb
@@ -31,5 +33,11 @@ C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalApp
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Web.Api.Test\obj\Debug\MedicalAppointments.Web.Api.Tests.csproj.CopyComplete
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Web.Api.Test\obj\Debug\MedicalAppointments.Web.Api.Test.dll
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Web.Api.Test\obj\Debug\MedicalAppointments.Web.Api.Test.pdb
-C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Web.Api.Test\bin\Debug\MedicalAppointments.Common.dll
-C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Web.Api.Test\bin\Debug\MedicalAppointments.Common.pdb
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Web.Api.Test\bin\Debug\WebActivatorEx.dll
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Web.Api.Test\bin\Debug\Ninject.Web.Common.dll
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Web.Api.Test\bin\Debug\Ninject.dll
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Web.Api.Test\bin\Debug\Ninject.Web.Common.WebHost.dll
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Web.Api.Test\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Web.Api.Test\bin\Debug\Ninject.Web.Common.xml
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Web.Api.Test\bin\Debug\Ninject.xml
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments.Web.Api.Test\bin\Debug\Ninject.Web.Common.WebHost.xml

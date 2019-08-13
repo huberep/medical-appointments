@@ -50,6 +50,8 @@ C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalApp
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\bin\Antlr3.Runtime.dll
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\bin\EntityFramework.dll
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\bin\EntityFramework.SqlServer.dll
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\bin\GridMvc.dll
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\bin\MedicalAppointments.Common.dll
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\bin\MedicalAppointments.DataAccess.dll
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\bin\MedicalAppointments.Web.Api.dll
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\bin\Microsoft.AspNet.Identity.Core.dll
@@ -79,6 +81,7 @@ C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalApp
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\bin\System.Web.WebPages.dll
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\bin\System.Web.WebPages.Razor.dll
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\bin\WebGrease.dll
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\bin\MedicalAppointments.Common.pdb
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\bin\MedicalAppointments.DataAccess.pdb
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\bin\MedicalAppointments.DataAccess.dll.config
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\bin\MedicalAppointments.Web.Api.pdb
@@ -115,6 +118,10 @@ C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalApp
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\obj\Debug\MedicalAppointments.Web.csproj.CopyComplete
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\obj\Debug\MedicalAppointments.dll
 C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\obj\Debug\MedicalAppointments.pdb
-C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\bin\MedicalAppointments.Common.dll
-C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\bin\MedicalAppointments.Common.pdb
-C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\bin\GridMvc.dll
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\bin\WebActivatorEx.dll
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\bin\Ninject.Web.Common.dll
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\bin\Ninject.dll
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\bin\Ninject.Web.Common.WebHost.dll
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\bin\Ninject.Web.Common.xml
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\bin\Ninject.xml
+C:\Users\iHuber\source\repos\medical-appointments\MedicalAppointments\MedicalAppointments\bin\Ninject.Web.Common.WebHost.xml

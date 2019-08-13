@@ -39,11 +39,11 @@ namespace MedicalAppointments.DataAccess.Services
             }
         }
 
-        public IModel Cancel(IModel model)
+        public IModel Cancel(Appointment model)
         {
             using (var db = _dbContext)
             {
-                var appointmentToCancel = db.Appointments.FirstOrDefault(a => a.Id.Equals((model as Appointment).Id) && a.IsActive);
+                var appointmentToCancel = db.Appointments.FirstOrDefault(a => a.Id.Equals(model.Id) && a.IsActive) as Appointment;
                 var canBeCancelled = appointmentToCancel?.Date < DateTime.Now.AddHours(24) ? true : false;
                 if (canBeCancelled)
                 {

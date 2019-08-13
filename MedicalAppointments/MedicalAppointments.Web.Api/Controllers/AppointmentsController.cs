@@ -63,7 +63,7 @@ namespace MedicalAppointments.Web.Api.Controllers
         [Route("api/appointments/cancel")]
         public IHttpActionResult Cancel([FromBody] Appointment appointment)
         {
-            if (!ModelState.IsValid || !MedicalAppointmentsApiUtilities.IsValid(appointment))
+            if (!ModelState.IsValid)
                 return BadRequest("Invalid data.");
 
             var result = (_repository as AppointmentRepository).Cancel(appointment) as IAppointment;
